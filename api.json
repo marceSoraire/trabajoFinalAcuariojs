@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "precio": 700,
+        "title": "Oxelote",
+        "imgPez": "../img/A01.jpg"
+    },
+    {
+        "id": 2,
+        "precio": 600,
+        "title": "Goldenfish",
+        "imgPez": "../img/A99.jpg"
+    },
+    {
+        "id": 3,
+        "precio": 300,
+        "title": "Tetra",
+        "imgPez": "../img/A20.jpg"
+    },
+    {
+        "id": 4,
+        "precio": 500,
+        "title": "Betagreey",
+        "imgPez": "../img/A17.jpg"
+    },
+    {
+        "id": 5,
+        "precio": 500,
+        "title": "BetOrange",
+        "imgPez": "../img/A19.jpg"
+    },
+    {
+        "id": 6,
+        "precio": 650,
+        "title": "Escalar",
+        "imgPez": "../img/A13.jpg"
+    },
+    {
+        "id": 7,
+        "precio": 7000,
+        "title": "Payaso",
+        "imgPez": "../img/A21.jpg"
+    },
+    {
+        "id": 8,
+        "precio": 800,
+        "title": "Ancistrus",
+        "imgPez": "../img/A28.jpg"
+    },
+    {
+        "id": 9,
+        "precio": 450,
+        "title": "Caracol",
+        "imgPez": "../img/A08.jpg"
+    },
+    {
+        "id": 10,
+        "precio": 650,
+        "title": "EscalarY",
+        "imgPez": "../img/A10.jpg"
+    },
+    {
+        "id": 11,
+        "precio": 500,
+        "title": "BetaRed",
+        "imgPez": "../img/007.jpg"
+    },
+    {
+        "id": 12,
+        "precio": 750,
+        "title": "BetaPink",
+        "imgPez": "../img/A15.jpg"
+    },
+    {
+        "id": 13,
+        "precio": 820,
+        "title": "Crab",
+        "imgPez": "../img/A26.jpg"
+    },
+    {
+        "id": 14,
+        "precio": 750,
+        "title": "BetaBlue",
+        "imgPez": "../img/A68.jpg"
+    },
+    {
+        "id": 15,
+        "precio": 760,
+        "title": "BetaBlack",
+        "imgPez": "../img/A66.jpg"
+    },
+    {
+        "id": 16,
+        "precio": 780,
+        "title": "BetaRed",
+        "imgPez": "../img/A70.jpg"
+    },
+    {
+        "id": 17,
+        "precio": 790,
+        "title": "BetaB",
+        "imgPez": "../img/A69.jpg"
+    },
+    {
+        "id": 18,
+        "precio": 710,
+        "title": "BetaClasic",
+        "imgPez": "../img/A14.jpg"
+    }
+]

@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Otomanopee One', sans-serif;
+}
+.header {
+    background: #315fa8;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #18202d;
+    margin-bottom: 1rem; 
+}
+.logo {
+    margin: 10px 4rem;
+    width: 12wh;
+    height: 12vh;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.name {
+    color: white !important;
+    font-size: 36px; }
+.name:hover {
+    color: #dfdada !important; }
+.nav-div {
+    color: white !important;
+    font-size: 16px;
+    margin: 0 20px; }
+.nav-div:hover {
+    color: #dfdada !important; }
+.carro {
+    background: none;
+    border: none;
+    color: #18202d;
+    padding: 3px;
+    width: 7wh;
+    height: 7vh; 
+}  
+.img-min {
+    width: 3wh;
+    height: 3vh; 
+}
+.wsp {
+    color: green;
+    font-size: 80px;
+}
+.wsp:hover {
+    color: #18202d; 
+}
+.card-pez {
+    height: 25vh;
+}
+.end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    font-family:Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    background: rgb(60, 94, 60);
+    border-radius: 10%;
+    border: 1px solid #333;
+}
+.theend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 8px;
+  
+}
+.unanime {
+    display: block;
+    margin: 1rem;
+    padding: 8px;
+    color: #fff;
+    background:#222;
+    border-radius: 5%;
+}
+.exito {
+    /* display: none; */
+    display: flex;
+    opacity: .5;
+    width: 100%;
+    height: 20vh;
+    background: rgb(141, 238, 128);
+    border: 1px solid #333;
+}
+h1 {
+    margin: auto;
+    padding: 20px;
+    color: #000;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+/* header h1{
+    letter-spacing: 6px;
+    font-family: 'Otomanopee One', sans-serif;
+    text-shadow: 2px 2px 2px #ccc;
+}
+header h1{
+    display: block;
+    text-align: center;
+} */
+/* #productos{
+    height: 300px;
+    
+}
+
+#carrito > table > thead > tr > th{
+    background-color: #444;
+    color: blanchedalmond;
+}
+
+
+.container .table{
+    height: 100px;
+    width: 100%;
+    border-spacing: 5px;
+    text-align: center;
+    
+}
+
+.container .table tr th {
+    border: 1px solid #ccc;
+}
+#cards{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#items > tr > td{
+    border: 1px solid #ccc;
+}
+
+.card{
+    width: 150px;
+    height: 260px;
+   margin: 20px;
+   margin-top: 0px;
+   padding-bottom: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px #ccc;
+    overflow: hidden;
+}
+#imagen{
+    width: 100%;
+    height: 50%;
+    
+}
+#imagen img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+#cards > div > div > div > button{
+    background-color: #555;
+    border-radius: 2px;
+    color: blanchedalmond;
+    
+}
+#cards > div > div > div > h5 {
+    font-size: 22px;
+    margin-top: 11px;
+    margin-bottom: 13px;
+}
+
+#cards > div > div > div.card-body > p{
+    color: darkblue;
+    font-size: 18px;
+}
+
+#footer{
+    
+    background-color: #ccc;
+    
+} */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    height: 30vh;
+    background: #504e4e; 
+}
+.dato {
+    color: white; 
+}
+.dato:hover {
+    color: #dfdada; 
+}
+.creditos {
+    width: 8wh;
+    height: 8vh;
+    margin: 0px 15px;
+    padding: 5px 5px;
+    border-radius: 3%; 
+}

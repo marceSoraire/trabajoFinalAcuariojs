@@ -11,6 +11,7 @@ let carrito = {};
 
 items.addEventListener('click', e => crearCompra(e));
 
+//revisar esto
 document.addEventListener('DOMContentLoaded', e => { 
     fetchData();
 

@@ -78,6 +78,21 @@
         </nav>
     </header>
     <main>
+        <div class="container">
+            <h2>Carrito</h2>
+            <hr>
+            <table class="table">
+                <thead>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Total</th>
+                </thead>
+                <tbody id="agregados"></tbody>
+            </table>
+            <div class="row" id="items"></div>
+            <button id="compraFinal" class="end">COMPRAR</button>
+        </div>
         <template id="template-card">
             <div class="col-12 mb-4 col-md-2">
                 <div class="card">
@@ -106,21 +121,6 @@
                 <button id="cuatro" class="unanime four"></button>
             </div>
         </template>
-        <div class="container">
-            <h2>Carrito</h2>
-            <hr>
-            <table class="table">
-                <thead>
-                    <th scope="col">#</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Total</th>
-                </thead>
-                <tbody id="agregados"></tbody>
-            </table>
-            <div class="row" id="items"></div>
-            <button id="compraFinal" class="end">COMPRAR</button>
-        </div>
         <div id="cerrado" class="confirmacion"></div>
         <div id="compraExitosa"></div>
     </main>

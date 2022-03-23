@@ -81,7 +81,6 @@
     border-radius: 5%;
 }
 .exito {
-    /* display: none; */
     display: flex;
     opacity: .5;
     width: 100%;

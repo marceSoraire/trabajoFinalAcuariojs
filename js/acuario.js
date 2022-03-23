@@ -11,14 +11,13 @@ let carrito = {};
 
 items.addEventListener('click', e => crearCompra(e));
 
-//revisar esto
+// DOMContentLoaded se dispara cuando el documento html fue cargado y parseado
 document.addEventListener('DOMContentLoaded', e => { 
     fetchData();
 
-    if (localStorage.getItem("carrito")) {
-        carrito = JSON.parse(localStorage.getItem("carrito"));
-        mostrarCarrito();
-    }
+    //operacion avanzada
+    localStorage.getItem('carrito') ? carrito = JSON.parse(localStorage.getItem('carrito')) : localStorage.setItem('carrito', JSON.stringify(carrito));
+    mostrarCompra();
 });
 
 ///////consume la api.json
@@ -43,13 +42,12 @@ mostrarCards = data => {
 }
 
 crearCompra = e =>{
-    if (e.target.classList.contains('btn')) {
-        agregarCarrito(e.target.parentElement);
-    }
+    //operacion avanzada
+    e.target.classList.contains('btn') && agregarCarrito(e.target.parentElement);
     e.stopPropagation();
 };
 
-agregarCarrito =e=>{
+agregarCarrito = e =>{
     const productos = {
         id: e.querySelector('.btn').dataset.id,
         title: e.querySelector('h5').textContent,
@@ -60,12 +58,14 @@ agregarCarrito =e=>{
     if (carrito.hasOwnProperty(productos.id)) {
         productos.cantidad = carrito[productos.id].cantidad + 1;
     }
-
+    //spread del producto 
     carrito[productos.id] = {...productos};
+    
+    localStorage.setItem("carrito",JSON.stringify(carrito));
     mostrarCompra();
 }
 
-mostrarCompra=()=>{
+mostrarCompra =()=> {
     agregados.innerHTML ='';
     Object.values(carrito).forEach(producto =>{
         templateProducto.querySelector('th').textContent = producto.id,
@@ -84,7 +84,7 @@ compraConfirmada =()=> {
 
     cerrado.innerHTML ='';
     const ticket = Object.values(carrito).reduce((acc,{cantidad,precio})=> acc + cantidad*precio,0);
-    templatePago.querySelectorAll('button')[0].textContent = '1 Pago';
+    templatePago.querySelectorAll('button')[0].textContent = `1 Pago de $${ticket}`;
     templatePago.querySelectorAll('button')[1].textContent = '3 cuotas 10% recargo';
     templatePago.querySelectorAll('button')[2].textContent = '6 cuotas 15% recargo';
     templatePago.querySelectorAll('button')[3].textContent = '12 cuotas 20% recargo';
@@ -110,21 +110,25 @@ opcionPago = (ticket,e) =>{
     compraExitosa.className ="exito";
     if (e.target.classList.contains('one')) {
         compraExitosa.innerHTML =`<h1>Su pago de $${ticket} fue aceptado</h1>`;
+        localStorage.clear();
         return ticket;
     }
     if (e.target.classList.contains('two')) {
         let tresCuotas = (ticket / 3) * 1.10;
-        compraExitosa.innerHTML =`<h1>Su primer pago de $${Math.round(tresCuotas)} en 3 cuotas fue aceptado fue aceptado</h1>`;
+        compraExitosa.innerHTML =`<h1>Su primer pago de $${Math.round(tresCuotas)} en 3 cuotas fue aceptado</h1>`;
+        localStorage.clear();
         return tresCuotas;
     }
     if (e.target.classList.contains('three')) {
         let seisCuotas = (ticket / 6) * 1.15;
-        compraExitosa.innerHTML =`<h1>Su primer pago de $${Math.round(seisCuotas)} en 6 cuotas fue aceptado fue aceptado</h1>`;
+        compraExitosa.innerHTML =`<h1>Su primer pago de $${Math.round(seisCuotas)} en 6 cuotas fue aceptado</h1>`;
+        localStorage.clear();
         return siesCuotas;
     }
     if (e.target.classList.contains('four')) {
         let doceCuotas = (ticket / 12) * 1.20;
-        compraExitosa.innerHTML =`<h1>Su primer pago de $${Math.round(doceCuotas)} en 12 cuotas fue aceptado fue aceptado</h1>`;
+        compraExitosa.innerHTML =`<h1>Su primer pago de $${Math.round(doceCuotas)} en 12 cuotas fue aceptado</h1>`;
+        localStorage.clear();
         return doceCuotas;
     }
 }

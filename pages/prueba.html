@@ -29,7 +29,7 @@
                 <div class="collpase navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link nav-div" aria-current="page" href="./peces.html">Peces</a>
+                            <a class="nav-link nav-div" aria-current="page" href="./prueba.html">Peces</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle nav-div" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,7 +74,8 @@
         </nav>
     </header>
     <main>
-        <div class="container">
+        <div class="container-carrito">
+            <div class="row" id="items"></div>
             <h2>Carrito</h2>
             <hr>
             <table class="table">
@@ -82,11 +83,11 @@
                     <th scope="col">#</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Cantidad</th>
+                    <th scope="col">Eliminar</th>
                     <th scope="col">Total</th>
                 </thead>
                 <tbody id="agregados"></tbody>
             </table>
-            <div class="row" id="items"></div>
             <button id="compraFinal" class="end">COMPRAR</button>
         </div>
         <template id="template-card">
@@ -96,7 +97,7 @@
                     <div class="card-body">
                         <h5>Titulo</h5>
                         <p>precio</p>
-                        <button class="btn btn-dark">Comprar</button>
+                        <button class="btn btn-dark">Agregar</button>
                     </div>
                 </div>
             </div>
@@ -106,6 +107,7 @@
                 <th scope="row">id</th>
                 <td>Pez</td>
                 <td>Cant</td>
+                <td><button class="brr">X</button></td>
                 <td>$ <span>00</span></td>
             </tr>
         </template>
@@ -133,6 +135,7 @@
            <img src="../img/mercadopago.jpg" alt="mercadopago" class="creditos">
         </div>
     </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="../js/acuario.js"></script>
 </body>

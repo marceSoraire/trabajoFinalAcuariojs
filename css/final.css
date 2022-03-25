@@ -51,6 +51,18 @@
 .card-pez {
     height: 25vh;
 }
+.container-carrito {
+    margin: 2rem auto;
+    width: 90%;
+}
+.brr {
+    background:#333;
+    color: white;
+    border: 1px solid #504e4e;
+    border-radius: 15%;
+    padding: 0 20px;
+    margin-top: 4px auto;
+}
 .end {
     display: flex;
     align-items: center;

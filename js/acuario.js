@@ -10,6 +10,7 @@ const fragment = document.createDocumentFragment();
 let carrito = {};
 
 items.addEventListener('click', e => crearCompra(e));
+agregados.addEventListener('click', e=> restarProducto(e));
 
 // DOMContentLoaded se dispara cuando el documento html fue cargado y parseado
 document.addEventListener('DOMContentLoaded', e => { 
@@ -33,7 +34,8 @@ mostrarCards = data => {
         templateCard.querySelector('h5').textContent = element.title;
         templateCard.querySelector('p').textContent = element.precio;
         templateCard.querySelector('img').setAttribute('src', element.imgPez);
-        templateCard.querySelector('.btn').dataset.id = element.id;
+        templateCard.querySelectorAll('.btn')[0].dataset.id = element.id;
+
 
         const clone = templateCard.cloneNode(true);
         fragment.appendChild(clone);
@@ -55,12 +57,29 @@ agregarCarrito = e =>{
         cantidad: 1,
     }
 
+    // El método hasOwnProperty() devuelve un booleano indicando si el objeto tiene la propiedad especificada.
     if (carrito.hasOwnProperty(productos.id)) {
         productos.cantidad = carrito[productos.id].cantidad + 1;
     }
-    //spread del producto 
+    //Spread que sumar un producto
     carrito[productos.id] = {...productos};
     
+    if(carrito[productos.cantidad] === 0){
+        agregados.innerHTML=`<h3>preducto vacio</h3>`;
+    }
+    localStorage.setItem("carrito",JSON.stringify(carrito));
+    mostrarCompra();
+}
+
+restarProducto = e => {
+   if(e.target.classList.contains('brr')){
+       const restar = carrito[e.target.dataset.id];
+       restar.cantidad = carrito[e.target.dataset.id].cantidad - 1;
+
+       //Spread que restar un producto
+       carrito[restar.id] = {...restar};
+    }
+
     localStorage.setItem("carrito",JSON.stringify(carrito));
     mostrarCompra();
 }
@@ -71,13 +90,13 @@ mostrarCompra =()=> {
         templateProducto.querySelector('th').textContent = producto.id,
         templateProducto.querySelectorAll('td')[0].textContent = producto.title,
         templateProducto.querySelectorAll('td')[1].textContent = producto.cantidad,
+        templateProducto.querySelector('button').dataset.id = producto.id,
         templateProducto.querySelector('span').textContent = producto.cantidad * producto.precio
 
         const clone = templateProducto.cloneNode(true);
         fragment.appendChild(clone);
     });
     agregados.appendChild(fragment);
-    
 }
 
 compraConfirmada =()=> {

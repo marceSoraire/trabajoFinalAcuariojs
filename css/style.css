@@ -90,12 +90,17 @@
   main .principal {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 3rem 9rem; }
     main .principal .colors {
+      padding: 1px;
       color: #18202d;
-      background: #dfdada; }
-  
+    }
+  .irPage {
+    color: #315fa8;
+    margin: auto;
+    text-decoration: none;
+  }
   .wsp {
     color: green;
     font-size: 80px; }
@@ -492,9 +497,3 @@ header h1{
   color: darkblue;
   font-size: 18px;
 }
-
-/* #footer{
-  
-  background-color: #ccc;
-  
-} */

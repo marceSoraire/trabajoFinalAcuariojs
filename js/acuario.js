@@ -36,7 +36,6 @@ mostrarCards = data => {
         templateCard.querySelector('img').setAttribute('src', element.imgPez);
         templateCard.querySelectorAll('.btn')[0].dataset.id = element.id;
 
-
         const clone = templateCard.cloneNode(true);
         fragment.appendChild(clone);
     });
@@ -44,7 +43,7 @@ mostrarCards = data => {
 }
 
 crearCompra = e =>{
-    //operacion avanzada
+    //operacion avanzada AND
     e.target.classList.contains('btn') && agregarCarrito(e.target.parentElement);
     e.stopPropagation();
 };
@@ -61,25 +60,30 @@ agregarCarrito = e =>{
     if (carrito.hasOwnProperty(productos.id)) {
         productos.cantidad = carrito[productos.id].cantidad + 1;
     }
-    //Spread que sumar un producto
+
+    //Spread que suma un producto
     carrito[productos.id] = {...productos};
-    
-    if(carrito[productos.cantidad] === 0){
-        agregados.innerHTML=`<h3>preducto vacio</h3>`;
-    }
     localStorage.setItem("carrito",JSON.stringify(carrito));
     mostrarCompra();
 }
 
 restarProducto = e => {
-   if(e.target.classList.contains('brr')){
+    if(e.target.classList.contains('brr')){
        const restar = carrito[e.target.dataset.id];
-       restar.cantidad = carrito[e.target.dataset.id].cantidad - 1;
-
-       //Spread que restar un producto
-       carrito[restar.id] = {...restar};
+       
+        if (restar.cantidad <= 0) {   
+           //incorporando libreria
+            Swal.fire({
+                icon: 'error',
+                title: 'Vacio',
+                text: 'El carrito quedo vacio con este producto'
+            })
+        } else {
+            restar.cantidad = carrito[e.target.dataset.id].cantidad - 1;
+            //Spread que resta un producto
+            carrito[restar.id] = {...restar};
+        }
     }
-
     localStorage.setItem("carrito",JSON.stringify(carrito));
     mostrarCompra();
 }
@@ -127,27 +131,34 @@ final.onclick = compraConfirmada;
 opcionPago = (ticket,e) =>{
     compraExitosa.innerHTML ='';
     compraExitosa.className ="exito";
-    if (e.target.classList.contains('one')) {
-        compraExitosa.innerHTML =`<h1>Su pago de $${ticket} fue aceptado</h1>`;
-        localStorage.clear();
-        return ticket;
-    }
-    if (e.target.classList.contains('two')) {
-        let tresCuotas = (ticket / 3) * 1.10;
-        compraExitosa.innerHTML =`<h1>Su primer pago de $${Math.round(tresCuotas)} en 3 cuotas fue aceptado</h1>`;
-        localStorage.clear();
-        return tresCuotas;
-    }
-    if (e.target.classList.contains('three')) {
-        let seisCuotas = (ticket / 6) * 1.15;
-        compraExitosa.innerHTML =`<h1>Su primer pago de $${Math.round(seisCuotas)} en 6 cuotas fue aceptado</h1>`;
-        localStorage.clear();
-        return siesCuotas;
-    }
-    if (e.target.classList.contains('four')) {
-        let doceCuotas = (ticket / 12) * 1.20;
-        compraExitosa.innerHTML =`<h1>Su primer pago de $${Math.round(doceCuotas)} en 12 cuotas fue aceptado</h1>`;
-        localStorage.clear();
-        return doceCuotas;
-    }
+
+    //operadores avanzados AND
+    e.target.classList.contains('one') && unPago(ticket);
+    e.target.classList.contains('two') && tresPagos(ticket);
+    e.target.classList.contains('three') && siesPagos(ticket);
+    e.target.classList.contains('four') && docePagos(ticket);
+}
+
+unPago =(ticket)=>{
+    compraExitosa.innerHTML =`<h1>Su pago de $${ticket} fue aceptado</h1>`;
+    localStorage.clear();
+    return ticket;
+}
+tresPagos=(ticket)=>{
+    let tresCuotas = (ticket / 3) * 1.10;
+    compraExitosa.innerHTML =`<h1>Su primer pago de $${Math.round(tresCuotas)} en 3 cuotas fue aceptado</h1>`;
+    localStorage.clear();
+    return tresCuotas;
+}
+siaePagos=(ticket)=>{
+    let seisCuotas = (ticket / 6) * 1.15;
+    compraExitosa.innerHTML =`<h1>Su primer pago de $${Math.round(seisCuotas)} en 6 cuotas fue aceptado</h1>`;
+    localStorage.clear();
+    return siesCuotas;
+}
+docePagos=(ticket)=>{
+    let doceCuotas = (ticket / 12) * 1.20;
+    compraExitosa.innerHTML =`<h1>Su primer pago de $${Math.round(doceCuotas)} en 12 cuotas fue aceptado</h1>`;
+    localStorage.clear();
+    return doceCuotas;
 }

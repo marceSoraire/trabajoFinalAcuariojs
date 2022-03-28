@@ -56,9 +56,10 @@
     width: 90%;
 }
 .brr {
-    background:#333;
+    background:#504e4e;
     color: white;
-    border: 1px solid #504e4e;
+    border: 1px solid #333;
+    font-size: 13px;
     border-radius: 15%;
     padding: 0 20px;
     margin-top: 4px auto;

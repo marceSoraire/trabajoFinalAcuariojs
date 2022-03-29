@@ -1,29 +1,3 @@
-// crearCompra = e =>{
-//     //operacion avanzada AND
-//     e.target.classList.contains('btn') && agregarCarrito(e.target.parentElement);
-//     e.stopPropagation();
-// };
-
-///////// funciones
-agregarCarrito = e =>{
-    const productos = {
-        id: e.querySelector('.btn').dataset.id,
-        title: e.querySelector('h5').textContent,
-        precio: e.querySelector('p').textContent,
-        cantidad: 1,
-    }
-
-    // El método hasOwnProperty() devuelve un booleano indicando si el objeto tiene la propiedad especificada.
-    if (carrito.hasOwnProperty(productos.id)) {
-        productos.cantidad = carrito[productos.id].cantidad + 1;
-    }
-
-    //Spread que suma un producto
-    carrito[productos.id] = {...productos};
-    localStorage.setItem("carrito",JSON.stringify(carrito));
-    mostrarCompra();
-}
-
 restarProducto = e => {
     if(e.target.classList.contains('brr')){
        const restar = carrito[e.target.dataset.id];
@@ -44,29 +18,6 @@ restarProducto = e => {
     localStorage.setItem("carrito",JSON.stringify(carrito));
     mostrarCompra();
 }
-
-// compraConfirmada =()=> {
-
-//     cerrado.innerHTML ='';
-//     const ticket = Object.values(carrito).reduce((acc,{cantidad,precio})=> acc + cantidad*precio,0);
-//     templatePago.querySelectorAll('button')[0].textContent = `1 Pago de $${ticket}`;
-//     templatePago.querySelectorAll('button')[1].textContent = '3 cuotas 10% recargo';
-//     templatePago.querySelectorAll('button')[2].textContent = '6 cuotas 15% recargo';
-//     templatePago.querySelectorAll('button')[3].textContent = '12 cuotas 20% recargo';
-//     const clone = templatePago.cloneNode(true);
-//     fragment.appendChild(clone);
-//     cerrado.appendChild(fragment);
-
-//     const uno = document.getElementById('uno');
-//     const dos = document.getElementById('dos');
-//     const tres = document.getElementById('tres');
-//     const cuatro = document.getElementById('cuatro');
-
-//     uno.addEventListener('click', e => opcionPago(ticket,e));
-//     dos.addEventListener('click', e => opcionPago(ticket,e));
-//     tres.addEventListener('click', e => opcionPago(ticket,e));
-//     cuatro.addEventListener('click', e => opcionPago(ticket,e));
-// }
 
 unPago =(ticket)=>{
     const swalWithBootstrapButtons = Swal.mixin({
@@ -102,6 +53,7 @@ unPago =(ticket)=>{
             }
         localStorage.clear();
         agregados.innerHTML ="";
+        cerrado.innerHTML ="";
         return ticket;
     }) 
 }
@@ -140,6 +92,7 @@ tresPagos=(ticket)=>{
             }
         localStorage.clear();
         agregados.innerHTML ="";
+        cerrado.innerHTML ="";
         return tresCuotas;
     }) 
 }
@@ -178,6 +131,7 @@ seisPagos=(ticket)=>{
             }
         localStorage.clear();
         agregados.innerHTML ="";
+        cerrado.innerHTML ="";
         return seisCuotas;
     }) 
 }
@@ -216,6 +170,7 @@ docePagos=(ticket)=>{
             }
         localStorage.clear();
         agregados.innerHTML ="";
+        cerrado.innerHTML ="";
         return doceCuotas;
     })
 }

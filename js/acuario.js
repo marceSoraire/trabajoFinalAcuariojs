@@ -2,7 +2,7 @@ const items = document.getElementById("items");
 const agregados = document.getElementById('agregados');
 const final = document.getElementById('compraFinal');
 const cerrado = document.getElementById('cerrado');
-const compraExitosa = document.getElementById('compraExitosa');
+const end = document.getElementById('end');
 const templateCard = document.getElementById("template-card").content;
 const templateProducto = document.getElementById('template-productos').content;
 const templatePago = document.getElementById('template-pago').content;
@@ -47,45 +47,24 @@ crearCompra = e =>{
     e.stopPropagation();
 };
 
-// agregarCarrito = e =>{
-//     const productos = {
-//         id: e.querySelector('.btn').dataset.id,
-//         title: e.querySelector('h5').textContent,
-//         precio: e.querySelector('p').textContent,
-//         cantidad: 1,
-//     }
+agregarCarrito = e =>{
+    const productos = {
+        id: e.querySelector('.btn').dataset.id,
+        title: e.querySelector('h5').textContent,
+        precio: e.querySelector('p').textContent,
+        cantidad: 1,
+    }
 
-//     // El método hasOwnProperty() devuelve un booleano indicando si el objeto tiene la propiedad especificada.
-//     if (carrito.hasOwnProperty(productos.id)) {
-//         productos.cantidad = carrito[productos.id].cantidad + 1;
-//     }
+    // El método hasOwnProperty() devuelve un booleano indicando si el objeto tiene la propiedad especificada.
+    if (carrito.hasOwnProperty(productos.id)) {
+        productos.cantidad = carrito[productos.id].cantidad + 1;
+    }
 
-//     //Spread que suma un producto
-//     carrito[productos.id] = {...productos};
-//     localStorage.setItem("carrito",JSON.stringify(carrito));
-//     mostrarCompra();
-// }
-
-// restarProducto = e => {
-//     if(e.target.classList.contains('brr')){
-//        const restar = carrito[e.target.dataset.id];
-       
-//         if (restar.cantidad <= 0) {   
-//            //incorporando libreria
-//             Swal.fire({
-//                 icon: 'error',
-//                 title: 'Vacio',
-//                 text: 'El carrito quedo vacio con este producto'
-//             })
-//         } else {
-//             restar.cantidad = carrito[e.target.dataset.id].cantidad - 1;
-//             //Spread que resta un producto
-//             carrito[restar.id] = {...restar};
-//         }
-//     }
-//     localStorage.setItem("carrito",JSON.stringify(carrito));
-//     mostrarCompra();
-// }
+    //Spread que suma un producto
+    carrito[productos.id] = {...productos};
+    localStorage.setItem("carrito",JSON.stringify(carrito));
+    mostrarCompra();
+}
 
 mostrarCompra =()=> {
     agregados.innerHTML ='';
@@ -128,7 +107,6 @@ compraConfirmada =()=> {
 final.onclick = compraConfirmada;
 
 opcionPago = (ticket,e) =>{
-    compraExitosa.innerHTML ='';
 
     //operadores avanzados AND
     e.target.classList.contains('one') && unPago(ticket);
@@ -136,151 +114,3 @@ opcionPago = (ticket,e) =>{
     e.target.classList.contains('thre') && seisPagos(ticket);
     e.target.classList.contains('four') && docePagos(ticket);
 }
-
-// unPago =(ticket)=>{
-//     const swalWithBootstrapButtons = Swal.mixin({
-//         customClass: {
-//           confirmButton: 'btn btn-success',
-//           cancelButton: 'btn btn-danger'
-//         },
-//         buttonsStyling: false
-//         })
-//         swalWithBootstrapButtons.fire({
-//             title: 'Confirmar compra?',
-//             text: `un pago de $${ticket}`,
-//             icon: 'question',
-//             showCancelButton: true,
-//             confirmButtonText: 'Comprar!',
-//             cancelButtonText: 'Cancelar',
-//             reverseButtons: true
-//         }).then((result) => {
-//             if (result.isConfirmed) {
-//                 swalWithBootstrapButtons.fire(
-//                     'Exito!',
-//                     `Su pago de $${ticket} fue aceptado`,
-//                     'success'
-//                 )
-//             } else if (
-//                 /* Read more about handling dismissals below */
-//                 result.dismiss === Swal.DismissReason.cancel) {
-//                 swalWithBootstrapButtons.fire(
-//                     'Error',
-//                     `su compra de $${ticket} fue cancelada`,
-//                     'error'
-//                 )
-//             }
-//         localStorage.clear();
-//         return ticket;
-//     }) 
-// }
-// tresPagos=(ticket)=>{
-//     let tresCuotas = (ticket / 3) * 1.10;
-//     const swalWithBootstrapButtons = Swal.mixin({
-//         customClass: {
-//           confirmButton: 'btn btn-success',
-//           cancelButton: 'btn btn-danger'
-//         },
-//         buttonsStyling: false
-//         })
-//         swalWithBootstrapButtons.fire({
-//             title: 'Confirmar compra?',
-//             text: `3 cuotas de $${tresCuotas}`,
-//             icon: 'question',
-//             showCancelButton: true,
-//             confirmButtonText: 'Comprar!',
-//             cancelButtonText: 'Cancelar',
-//             reverseButtons: true
-//         }).then((result) => {
-//             if (result.isConfirmed) {
-//                 swalWithBootstrapButtons.fire(
-//                     'Exito!',
-//                     `Su primer cuota de $${tresCuotas} fue aceptada`,
-//                     'success'
-//                 )
-//             } else if (
-//                 /* Read more about handling dismissals below */
-//                 result.dismiss === Swal.DismissReason.cancel) {
-//                 swalWithBootstrapButtons.fire(
-//                     'Error',
-//                     `su compra en 3 cuotas de $${tresCuotas} fue cancelada`,
-//                     'error'
-//                 )
-//             }
-//         localStorage.clear();
-//         return tresCuotas;
-//     }) 
-// }
-// seisPagos=(ticket)=>{
-//     let seisCuotas = (ticket / 6) * 1.15;
-//     const swalWithBootstrapButtons = Swal.mixin({
-//         customClass: {
-//           confirmButton: 'btn btn-success',
-//           cancelButton: 'btn btn-danger'
-//         },
-//         buttonsStyling: false
-//         })
-//         swalWithBootstrapButtons.fire({
-//             title: 'Confirmar compra?',
-//             text: `6 cuotas de $${siesCuotas}`,
-//             icon: 'question',
-//             showCancelButton: true,
-//             confirmButtonText: 'Comprar!',
-//             cancelButtonText: 'Cancelar',
-//             reverseButtons: true
-//         }).then((result) => {
-//             if (result.isConfirmed) {
-//                 swalWithBootstrapButtons.fire(
-//                     'Exito!',
-//                     `Su primer cuota de $${siesCuotas} fue aceptado`,
-//                     'success'
-//                 )
-//             } else if (
-//                 /* Read more about handling dismissals below */
-//                 result.dismiss === Swal.DismissReason.cancel) {
-//                 swalWithBootstrapButtons.fire(
-//                     'Error',
-//                     `su compra en 6 cuotas de $${siesCuotas} fue cancelada`,
-//                     'error'
-//                 )
-//             }
-//         localStorage.clear();
-//         return seisCuotas;
-//     }) 
-// }
-// docePagos=(ticket)=>{
-//     let doceCuotas = (ticket / 12) * 1.20;
-//     const swalWithBootstrapButtons = Swal.mixin({
-//         customClass: {
-//           confirmButton: 'btn btn-success',
-//           cancelButton: 'btn btn-danger'
-//         },
-//         buttonsStyling: false
-//         })
-//         swalWithBootstrapButtons.fire({
-//             title: 'Confirmar compra?',
-//             text: `un pago de $${doceCuotas}`,
-//             icon: 'question',
-//             showCancelButton: true,
-//             confirmButtonText: 'Comprar!',
-//             cancelButtonText: 'Cancelar',
-//             reverseButtons: true
-//         }).then((result) => {
-//             if (result.isConfirmed) {
-//                 swalWithBootstrapButtons.fire(
-//                     'Exito!',
-//                     `Su primer cuota de $${doceCuotas} fue aceptado`,
-//                     'success'
-//                 )
-//             } else if (
-//                 /* Read more about handling dismissals below */
-//                 result.dismiss === Swal.DismissReason.cancel) {
-//                 swalWithBootstrapButtons.fire(
-//                     'Error',
-//                     `su compra en 12 cuotas de $${doceCuotas} fue cancelada`,
-//                     'error'
-//                 )
-//             }
-//         localStorage.clear();
-//         return seisCuotas;
-//     })
-// }

@@ -2,13 +2,14 @@ restarProducto = e => {
     if(e.target.classList.contains('brr')){
        const restar = carrito[e.target.dataset.id];
        
-        if (restar.cantidad <= 0) {   
+        if (restar.cantidad === 0) {   
            //incorporando libreria
             Swal.fire({
                 icon: 'error',
                 title: 'Vacio',
                 text: 'El carrito quedo vacio con este producto'
             })
+            delete carrito[e.target.dataset.id];
         } else {
             restar.cantidad = carrito[e.target.dataset.id].cantidad - 1;
             //Spread que resta un producto

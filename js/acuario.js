@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', e => {
 const fetchData = async () => {
     const res = await fetch('../json/api.json');
     const data = await res.json();
-    mostrarCards(data)
+    mostrarCards(data.peces);
+    // console.log(data.alimentos);
 }
 
 mostrarCards = data => {

@@ -1,7 +1,7 @@
 restarProducto = e => {
     if(e.target.classList.contains('brr')){
        const restar = carrito[e.target.dataset.id];
-       
+       console.log('aca')
         if (restar.cantidad === 0) {   
            //incorporando libreria
             Swal.fire({

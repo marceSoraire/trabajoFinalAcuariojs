@@ -1,16 +1,16 @@
-const itemsAlimento = document.getElementById("itemsAlimentos");
-const agregarAlimento = document.getElementById('agregarAlimento');
+const itemsAccesorios = document.getElementById("itemsAccesorios");
+const agregarAccesorio = document.getElementById('agregarAccesorio');
 const final = document.getElementById('compraFinal');
 const cerrado = document.getElementById('cerrado');
 const end = document.getElementById('end');
-const templateCardAlimentos = document.getElementById("template-card-alimentos").content;
-const templateProductoAlimentos = document.getElementById('template-productos').content;
-const templatePagoAlimentos = document.getElementById('template-pago').content;
+const templateCardAccesorio = document.getElementById("template-card-accesorio").content;
+const templateProductoAccesorio = document.getElementById('template-accesorio').content;
+const templatePagoAccesorio = document.getElementById('template-pago').content;
 const fragment = document.createDocumentFragment();
 let carrito = {};
 
-itemsAlimento.addEventListener('click', e => crearCompra(e));
-agregarAlimento.addEventListener('click', e=> restarProducto(e));
+itemsAccesorios.addEventListener('click', e => crearCompra(e));
+agregarAccesorio.addEventListener('click', e=> restarProducto(e));
 
 document.addEventListener('DOMContentLoaded', e => { 
     fetchData();
@@ -22,20 +22,20 @@ document.addEventListener('DOMContentLoaded', e => {
 const fetchData = async () => {
     const res = await fetch('../json/api.json');
     const data = await res.json();
-    mostrarCards(data.alimentos);
+    mostrarCards(data.accesorios);
 }
 
 mostrarCards = data => {
     data.forEach(e => {
-        templateCardAlimentos.querySelector('h5').textContent = e.marca;
-        templateCardAlimentos.querySelector('p').textContent = e.precio;
-        templateCardAlimentos.querySelector('img').setAttribute('src', e.imgAlimento);
-        templateCardAlimentos.querySelectorAll('.btn')[0].dataset.id = e.id;
+        templateCardAccesorio.querySelector('h5').textContent = e.type;
+        templateCardAccesorio.querySelector('p').textContent = e.precio;
+        templateCardAccesorio.querySelector('img').setAttribute('src', e.imgAcc);
+        templateCardAccesorio.querySelectorAll('.btn')[0].dataset.id = e.id;
 
-        const clone = templateCardAlimentos.cloneNode(true);
+        const clone = templateCardAccesorio.cloneNode(true);
         fragment.appendChild(clone);
     });
-    itemsAlimento.appendChild(fragment);
+    itemsAccesorios.appendChild(fragment);
 }
 
 crearCompra = e =>{
@@ -46,7 +46,7 @@ crearCompra = e =>{
 agregarCarrito = e =>{
     const productos = {
         id: e.querySelector('.btn').dataset.id,
-        marca: e.querySelector('h5').textContent,
+        type: e.querySelector('h5').textContent,
         precio: e.querySelector('p').textContent,
         cantidad: 1,
     }
@@ -61,29 +61,29 @@ agregarCarrito = e =>{
 }
 
 mostrarCompra =()=> {
-    agregarAlimento.innerHTML ='';
+    agregarAccesorio.innerHTML ='';
     Object.values(carrito).forEach(producto =>{
-        templateProductoAlimentos.querySelector('th').textContent = producto.id,
-        templateProductoAlimentos.querySelectorAll('td')[0].textContent = producto.marca,
-        templateProductoAlimentos.querySelectorAll('td')[1].textContent = producto.cantidad,
-        templateProductoAlimentos.querySelector('button').dataset.id = producto.id,
-        templateProductoAlimentos.querySelector('span').textContent = producto.cantidad * producto.precio
+        templateProductoAccesorio.querySelector('th').textContent = producto.id,
+        templateProductoAccesorio.querySelectorAll('td')[0].textContent = producto.marca,
+        templateProductoAccesorio.querySelectorAll('td')[1].textContent = producto.cantidad,
+        templateProductoAccesorio.querySelector('button').dataset.id = producto.id,
+        templateProductoAccesorio.querySelector('span').textContent = producto.cantidad * producto.precio
 
-        const clone = templateProductoAlimentos.cloneNode(true);
+        const clone = templateProductoAccesorio.cloneNode(true);
         fragment.appendChild(clone);
     });
-    agregarAlimento.appendChild(fragment);
+    agregarAccesorio.appendChild(fragment);
 }
 
 compraConfirmada =()=> {
 
     cerrado.innerHTML ='';
     const ticket = Object.values(carrito).reduce((acc,{cantidad,precio})=> acc + cantidad*precio,0);
-    templatePagoAlimentos.querySelectorAll('button')[0].textContent = `1 Pago de $${ticket}`;
-    templatePagoAlimentos.querySelectorAll('button')[1].textContent = '3 cuotas 10% recargo';
-    templatePagoAlimentos.querySelectorAll('button')[2].textContent = '6 cuotas 15% recargo';
-    templatePagoAlimentos.querySelectorAll('button')[3].textContent = '12 cuotas 20% recargo';
-    const clone = templatePagoAlimentos.cloneNode(true);
+    templatePagoAccesorio.querySelectorAll('button')[0].textContent = `1 Pago de $${ticket}`;
+    templatePagoAccesorio.querySelectorAll('button')[1].textContent = '3 cuotas 10% recargo';
+    templatePagoAccesorio.querySelectorAll('button')[2].textContent = '6 cuotas 15% recargo';
+    templatePagoAccesorio.querySelectorAll('button')[3].textContent = '12 cuotas 20% recargo';
+    const clone = templatePagoAccesorio.cloneNode(true);
     fragment.appendChild(clone);
     cerrado.appendChild(fragment);
 

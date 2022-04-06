@@ -1,110 +1,334 @@
-[
-    {
-        "id": 1,
-        "precio": 700,
-        "title": "Oxelote",
-        "imgPez": "../img/A01.jpg"
-    },
-    {
-        "id": 2,
-        "precio": 600,
-        "title": "Goldenfish",
-        "imgPez": "../img/A99.jpg"
-    },
-    {
-        "id": 3,
-        "precio": 300,
-        "title": "Tetra",
-        "imgPez": "../img/A20.jpg"
-    },
-    {
-        "id": 4,
-        "precio": 500,
-        "title": "Betagreey",
-        "imgPez": "../img/A17.jpg"
-    },
-    {
-        "id": 5,
-        "precio": 500,
-        "title": "BetOrange",
-        "imgPez": "../img/A19.jpg"
-    },
-    {
-        "id": 6,
-        "precio": 650,
-        "title": "Escalar",
-        "imgPez": "../img/A13.jpg"
-    },
-    {
-        "id": 7,
-        "precio": 700,
-        "title": "Payaso",
-        "imgPez": "../img/A21.jpg"
-    },
-    {
-        "id": 8,
-        "precio": 800,
-        "title": "Ancistrus",
-        "imgPez": "../img/A28.jpg"
-    },
-    {
-        "id": 9,
-        "precio": 450,
-        "title": "Caracol",
-        "imgPez": "../img/A08.jpg"
-    },
-    {
-        "id": 10,
-        "precio": 650,
-        "title": "EscalarY",
-        "imgPez": "../img/A10.jpg"
-    },
-    {
-        "id": 11,
-        "precio": 500,
-        "title": "BetaRed",
-        "imgPez": "../img/007.jpg"
-    },
-    {
-        "id": 12,
-        "precio": 750,
-        "title": "BetaPink",
-        "imgPez": "../img/A15.jpg"
-    },
-    {
-        "id": 13,
-        "precio": 820,
-        "title": "Crab",
-        "imgPez": "../img/A26.jpg"
-    },
-    {
-        "id": 14,
-        "precio": 750,
-        "title": "BetaBlue",
-        "imgPez": "../img/A68.jpg"
-    },
-    {
-        "id": 15,
-        "precio": 760,
-        "title": "BetaBlack",
-        "imgPez": "../img/A66.jpg"
-    },
-    {
-        "id": 16,
-        "precio": 780,
-        "title": "BetaRed",
-        "imgPez": "../img/A70.jpg"
-    },
-    {
-        "id": 17,
-        "precio": 790,
-        "title": "BetaB",
-        "imgPez": "../img/A69.jpg"
-    },
-    {
-        "id": 18,
-        "precio": 710,
-        "title": "BetaClasic",
-        "imgPez": "../img/A14.jpg"
-    }
-]
+{
+    "peces":[
+        {
+            "id": 1,
+            "precio": 700,
+            "title": "Oxelote",
+            "imgPez": "../img/A01.jpg"
+        },
+        {
+            "id": 2,
+            "precio": 600,
+            "title": "Goldenfish",
+            "imgPez": "../img/A99.jpg"
+        },
+        {
+            "id": 3,
+            "precio": 300,
+            "title": "Tetra",
+            "imgPez": "../img/A20.jpg"
+        },
+        {
+            "id": 4,
+            "precio": 500,
+            "title": "Betagreey",
+            "imgPez": "../img/A17.jpg"
+        },
+        {
+            "id": 5,
+            "precio": 500,
+            "title": "BetOrange",
+            "imgPez": "../img/A19.jpg"
+        },
+        {
+            "id": 6,
+            "precio": 650,
+            "title": "Escalar",
+            "imgPez": "../img/A13.jpg"
+        },
+        {
+            "id": 7,
+            "precio": 700,
+            "title": "Payaso",
+            "imgPez": "../img/A21.jpg"
+        },
+        {
+            "id": 8,
+            "precio": 800,
+            "title": "Ancistrus",
+            "imgPez": "../img/A28.jpg"
+        },
+        {
+            "id": 9,
+            "precio": 450,
+            "title": "Caracol",
+            "imgPez": "../img/A08.jpg"
+        },
+        {
+            "id": 10,
+            "precio": 650,
+            "title": "EscalarY",
+            "imgPez": "../img/A10.jpg"
+        },
+        {
+            "id": 11,
+            "precio": 500,
+            "title": "BetaRed",
+            "imgPez": "../img/007.jpg"
+        },
+        {
+            "id": 12,
+            "precio": 750,
+            "title": "BetaPink",
+            "imgPez": "../img/A15.jpg"
+        },
+        {
+            "id": 13,
+            "precio": 820,
+            "title": "Crab",
+            "imgPez": "../img/A26.jpg"
+        },
+        {
+            "id": 14,
+            "precio": 750,
+            "title": "BetaBlue",
+            "imgPez": "../img/A68.jpg"
+        },
+        {
+            "id": 15,
+            "precio": 760,
+            "title": "BetaBlack",
+            "imgPez": "../img/A66.jpg"
+        },
+        {
+            "id": 16,
+            "precio": 780,
+            "title": "BetaRed",
+            "imgPez": "../img/A70.jpg"
+        },
+        {
+            "id": 17,
+            "precio": 790,
+            "title": "BetaB",
+            "imgPez": "../img/A69.jpg"
+        },
+        {
+            "id": 18,
+            "precio": 710,
+            "title": "BetaClasic",
+            "imgPez": "../img/A14.jpg"
+        }
+    ],
+    "alimentos":[
+        {
+            "id": 101,
+            "precio": 700,
+            "marca": "Tetra",
+            "imgAlimento": "../img/alimentos/B01.jpg"
+        },
+        {
+            "id": 102,
+            "precio": 600,
+            "marca": "Tropical",
+            "imgAlimento": "../img/alimentos/B02.jpg"
+    
+        },
+        {
+            "id": 103,
+            "precio": 300,
+            "marca": "Tropical",
+            "imgAlimento": "../img/alimentos/B03.jpg"
+        },
+        {
+            "id": 104,
+            "precio": 500,
+            "marca": "TropicalBeta",
+            "imgAlimento": "../img/alimentos/B04.jpg"
+        },
+        {
+            "id": 105,
+            "precio": 500,
+            "marca": "TropicalRed",
+            "imgAlimento": "../img/alimentos/B05.jpg"
+        },
+        {
+            "id": 106,
+            "precio": 650,
+            "marca": "Supervit",
+            "imgAlimento": "../img/alimentos/B06.jpg"
+        },
+        {
+            "id": 107,
+            "precio": 700,
+            "marca": "Nanovit",
+            "imgAlimento": "../img/alimentos/B07.jpg"
+        },
+        {
+            "id": 108,
+            "precio": 800,
+            "marca": "BioDigest",
+            "imgAlimento": "../img/alimentos/B08.jpg"
+        },
+        {
+            "id": 109,
+            "precio": 450,
+            "marca": "Standard",
+            "imgAlimento": "../img/alimentos/B09.jpg"
+        },
+        {
+            "id": 110,
+            "precio": 650,
+            "marca": "Weekend",
+            "imgAlimento": "../img/alimentos/B10.jpg"
+        },
+        {
+            "id": 111,
+            "precio": 850,
+            "marca": "Crusta",
+            "imgAlimento": "../img/alimentos/B11.jpg"
+        },
+        {
+            "id": 112,
+            "precio": 1200,
+            "marca": "Discus",
+            "imgAlimento": "../img/alimentos/B12.jpg"
+        },
+        {
+            "id": 113,
+            "precio": 780,
+            "marca": "Alga",
+            "imgAlimento": "../img/alimentos/001.jpg"
+        },
+        {
+            "id": 114,
+            "precio": 530,
+            "marca": "Flourite",
+            "imgAlimento": "../img/alimentos/002.jpg"
+        },
+        {
+            "id": 115,
+            "precio": 850,
+            "marca": "OceanFree",
+            "imgAlimento": "../img/alimentos/003.jpg"
+        },
+        {
+            "id": 116,
+            "precio": 490,
+            "marca": "Flourish",
+            "imgAlimento": "../img/alimentos/004.jpg"
+        },
+        {
+            "id": 117,
+            "precio": 490,
+            "marca": "Advance",
+            "imgAlimento": "../img/alimentos/005.jpg"
+        },
+        {
+            "id": 118,
+            "precio": 350,
+            "marca": "Ampollas",
+            "imgAlimento": "../img/alimentos/022.jpg"
+        }
+    ],
+    "accesorios":[
+        {
+            "id": 201,
+            "precio": 250,
+            "type": "Rama",
+            "imgAcc": "../img/accesorios/X01.jpg"
+        },
+        {
+            "id": 202,
+            "precio": 280,
+            "type": "Rama",
+            "imgAcc": "../img/accesorios/X02.jpg"
+    
+        },
+        {
+            "id": 203,
+            "precio": 300,
+            "type": "Rama",
+            "imgAcc": "../img/accesorios/X03.jpg"
+        },
+        {
+            "id": 204,
+            "precio": 230,
+            "type": "Rama",
+            "imgAcc": "../img/accesorios/X04.jpg"
+        },
+        {
+            "id": 205,
+            "precio": 300,
+            "type": "Rama",
+            "imgAcc": "../img/accesorios/X05.jpg"
+        },
+        {
+            "id": 206,
+            "precio": 315,
+            "type": "Rama",
+            "imgAcc": "../img/accesorios/X06.jpg"
+        },
+        {
+            "id": 207,
+            "precio": 260,
+            "type": "Rama",
+            "imgAcc": "../img/accesorios/X07.jpg"
+        },
+        {
+            "id": 208,
+            "precio": 275,
+            "type": "Rama",
+            "imgAcc": "../img/accesorios/X08.jpg"
+        },
+        {
+            "id": 209,
+            "precio": 450,
+            "type": "Rama",
+            "imgAcc": "../img/accesorios/X13.jpg"
+        },
+        {
+            "id": 210,
+            "precio": 550,
+            "type": "Algas",
+            "imgAcc": "../img/accesorios/Y02.jpg"
+        },
+        {
+            "id": 211,
+            "precio": 475,
+            "type": "Algas",
+            "imgAcc": "../img/accesorios/Y03.jpg"
+        },
+        {
+            "id": 212,
+            "precio": 320,
+            "type": "Algas",
+            "imgAcc": "../img/accesorios/Y04.jpg"
+        },
+        {
+            "id": 213,
+            "precio": 380,
+            "type": "Alga",
+            "imgAcc": "../img/accesorios/Y06.jpg"
+        },
+        {
+            "id": 214,
+            "precio": 730,
+            "type": "Alga",
+            "imgAcc": "../img/accesorios/Y08.jpg"
+        },
+        {
+            "id": 215,
+            "precio": 1850,
+            "type": "accesorios",
+            "imgAcc": "../img/accesorios/Y10.jpg"
+        },
+        {
+            "id": 216,
+            "precio": 1890,
+            "type": "accesorios",
+            "imgAcc": "../img/accesorios/Z03.jpg"
+        },
+        {
+            "id": 217,
+            "precio": 490,
+            "type": "accesorios",
+            "imgAcc": "../img/accesorios/Z04.jpg"
+        },
+        {
+            "id": 218,
+            "precio": 730,
+            "type": "accesorios",
+            "imgAcc": "../img/accesorios/Y07.jpg"
+        }
+    ]  
+}

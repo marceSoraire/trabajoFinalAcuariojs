@@ -20,52 +20,57 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md nav-foot header">
+        <nav class="navbar navbar-expand-md navbar-light header">
             <div class="container">
                 <img src="../img/img02.jpg" class=" img-fluid logo animate__animated animate__flip" alt="logo">
                 <a class="navbar-brand name" href="../index.html">Pequeño Ser</a>
-                <img src="../img/nav-menu.jpg" class="navbar-toggler menuBurger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collpase navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link nav-div" aria-current="page" href="./prueba.html">Peces</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle nav-div" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="./alimentos.html">Alimentos</a></li>
-                                <li><a class="dropdown-item" href="./accesorios.html">Accesorios</a></li>
-                                <li><a class="dropdown-item" href="">Peceras</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link nav-div" aria-current="page" href="./productos.html">Productos</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle nav-div" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Redes
+                                Filtar Producto
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">
-                                    <img src="../img/fa.png" alt="Facebook" class="img-min">
-                                    Facebook
-                                </a>
-                            </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
-                                        <img src="../img/ig.png" alt="Instagram" class="img-min">
-                                        Instagram
-                                    </a>
+                                    <a class="dropdown-item" href="#" id="Alimentos">Agua Dulce</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" id="Ramas">Agua Salada</a>
                                 </li>
                             </ul>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle nav-div" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Redes
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <img src="../img/fa.png" alt="" class="img-min">
+                                            Facebook
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <img src="../img/ig.png" alt="" class="img-min">
+                                            Instagram
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search">
-                        <button class="carro" type="submit">
-                            <img src="../img/0020.png" class="carro">
-                        </button>
-                    </form>
+                    <button class="carro" type="submit">
+                        <img src="../img/0020.png" class="carro">
+                    </button>
                 </div>
             </div>
         </nav>

@@ -31,8 +31,9 @@
   /* SECCIONES */
   .header {
     background: #315fa8;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between !important;
     border-bottom: 2px solid #18202d; }
     .header .logo {
       margin: 10px 4rem;
@@ -53,13 +54,13 @@
       margin: 0 20px; }
       .header .nav-div:hover {
         color: #dfdada !important; }
-    .header .carro {
+    /* .header .carro {
       background: none;
       border: none;
       color: #18202d;
       padding: 3px;
       width: 7wh;
-      height: 7vh; }
+      height: 7vh; } */
   
   .img-min {
     width: 3wh;

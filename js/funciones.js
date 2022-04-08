@@ -1,7 +1,11 @@
+crearCompra = e =>{
+    e.target.classList.contains('btn') && agregarCarrito(e.target.parentElement);
+    e.stopPropagation();
+};
+
 restarProducto = e => {
     if(e.target.classList.contains('brr')){
        const restar = carrito[e.target.dataset.id];
-       console.log('aca')
         if (restar.cantidad === 0) {   
            //incorporando libreria
             Swal.fire({
@@ -18,6 +22,25 @@ restarProducto = e => {
     }
     localStorage.setItem("carrito",JSON.stringify(carrito));
     mostrarCompra();
+}
+
+filtrar =(btn,data)=> {
+    btn.onclick = () => {
+        titleProducto.textContent = `${btn.id}`;
+        console.log(titleProducto);
+        itemsAccesorios.innerHTML ='';
+        productoFiltrado = data.filter(data => { return data.tipo == btn.id})
+        console.log(productoFiltrado);
+        mostrarCards(productoFiltrado)
+    }   
+}
+
+opcionPago = (ticket,e) =>{
+
+    e.target.classList.contains('one') && unPago(ticket);
+    e.target.classList.contains('two') && tresPagos(ticket);
+    e.target.classList.contains('thre') && seisPagos(ticket);
+    e.target.classList.contains('four') && docePagos(ticket);
 }
 
 unPago =(ticket)=>{

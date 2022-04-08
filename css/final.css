@@ -6,13 +6,14 @@
 }
 .header {
     background: #315fa8;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid #18202d;
-    margin-bottom: 1rem; 
+    /* margin-bottom: 1rem;  */
 }
 .logo {
-    margin: 10px 4rem;
+    margin: 10px 5rem 10px 0px;
     width: 12wh;
     height: 12vh;
     border-radius: 50%;
@@ -20,15 +21,20 @@
 }
 .name {
     color: white !important;
-    font-size: 36px; }
+    font-size: 36px; 
+    padding-right: 4rem;
+}
 .name:hover {
-    color: #dfdada !important; }
+    color: #dfdada !important; 
+}
 .nav-div {
     color: white !important;
     font-size: 16px;
-    margin: 0 20px; }
+    margin: 0 20px; 
+}
 .nav-div:hover {
-    color: #dfdada !important; }
+    color: #dfdada !important; 
+}
 .carro {
     background: none;
     border: none;
@@ -41,7 +47,59 @@
     width: 3wh;
     height: 3vh; 
 }
+.imgPrincipal {
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    border-bottom: 2px solid #18202d; 
+}
+.text {
+    color: #18202d;
+    padding: 25px;
+    margin: 2rem 10rem;
+    border-radius: 1%;
+    border: 1px solid #999; 
+}
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    margin-top: 0px;
+    padding: 0px;
+    color: #18202d; 
+}
+p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.resaltador {
+    color: #777;
+    font-family: cursive;
+}
+.resaltador:hover {
+    color: #3e1e4e;
+    font-family: cursive;
+}
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem 9rem; 
+}
+.colors {
+    padding: 1px;
+    color: #18202d;
+}
+.irPage {
+    color: #315fa8;
+    margin: auto;
+    text-decoration: none;
+}
 .wsp {
+    padding: 15px;
     color: green;
     font-size: 80px;
 }
@@ -54,6 +112,13 @@
 .container-carrito {
     margin: 2rem auto;
     width: 90%;
+}
+.title-producto {
+    color: #000;
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .brr {
     background:#504e4e;

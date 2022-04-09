@@ -6,7 +6,8 @@ crearCompra = e =>{
 restarProducto = e => {
     if(e.target.classList.contains('brr')){
        const restar = carrito[e.target.dataset.id];
-        if (restar.cantidad === 0) {   
+       
+        if (restar.cantidad === 1) {   
            //incorporando libreria
             Swal.fire({
                 icon: 'error',
@@ -27,10 +28,8 @@ restarProducto = e => {
 filtrar =(btn,data)=> {
     btn.onclick = () => {
         titleProducto.textContent = `${btn.id}`;
-        console.log(titleProducto);
         itemsAccesorios.innerHTML ='';
         productoFiltrado = data.filter(data => { return data.tipo == btn.id})
-        console.log(productoFiltrado);
         mostrarCards(productoFiltrado)
     }   
 }

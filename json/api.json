@@ -196,41 +196,6 @@
             "img": "../img/productos/B12.jpg"
         },
         {
-            "id": 114,
-            "tipo": "Alimentos",
-            "precio": 530,
-            "title": "Flourite",
-            "img": "../img/productos/002.jpg"
-        },
-        {
-            "id": 115,
-            "tipo": "Alimentos",
-            "precio": 850,
-            "title": "OceanFree",
-            "img": "../img/productos/003.jpg"
-        },
-        {
-            "id": 116,
-            "tipo": "Alimentos",
-            "precio": 490,
-            "title": "Flourish",
-            "img": "../img/productos/004.jpg"
-        },
-        {
-            "id": 117,
-            "tipo": "Alimentos",
-            "precio": 490,
-            "title": "Advance",
-            "img": "../img/productos/005.jpg"
-        },
-        {
-            "id": 118,
-            "tipo": "Alimentos",
-            "precio": 350,
-            "title": "Ampollas",
-            "img": "../img/productos/022.jpg"
-        },
-        {
             "id": 151,
             "tipo": "Ramas",
             "precio": 250,
@@ -290,79 +255,114 @@
         {
             "id": 159,
             "tipo": "Ramas",
+            "precio": 265,
+            "title": "Rama",
+            "img": "../img/productos/X09.jpg"
+        },
+        {
+            "id": 160,
+            "tipo": "Ramas",
+            "precio": 325,
+            "title": "Rama",
+            "img": "../img/productos/X10.jpg"
+        },
+        {
+            "id": 161,
+            "tipo": "Ramas",
+            "precio": 375,
+            "title": "Rama",
+            "img": "../img/productos/X11.jpg"
+        },
+        {
+            "id": 162,
+            "tipo": "Ramas",
             "precio": 450,
             "title": "Rama",
-            "img": "../img/productos/X13.jpg"
+            "img": "../img/productos/X12.jpg"
         },
         {
             "id": 200,
             "tipo": "Algas",
             "precio": 550,
             "title": "Algas",
-            "img": "../img/productos/Y02.jpg"
+            "img": "../img/productos/Y01.jpg"
         },
         {
             "id": 201,
+            "tipo": "Algas",
+            "precio": 550,
+            "title": "Algas",
+            "img": "../img/productos/Y02.jpg"
+        },
+        {
+            "id": 202,
             "tipo": "Algas",
             "precio": 475,
             "title": "Algas",
             "img": "../img/productos/Y03.jpg"
         },
         {
-            "id": 202,
+            "id": 203,
             "tipo": "Algas",
             "precio": 320,
             "title": "Algas",
             "img": "../img/productos/Y04.jpg"
         },
         {
-            "id": 203,
+            "id": 204,
             "tipo": "Algas",
             "precio": 380,
             "title": "Alga",
-            "img": "../img/productos/Y06.jpg"
-        },
-        {
-            "id": 204,
-            "tipo": "Algas",
-            "precio": 730,
-            "title": "Alga",
-            "img": "../img/productos/Y08.jpg"
+            "img": "../img/productos/Y05.jpg"
         },
         {
             "id": 205,
             "tipo": "Algas",
-            "precio": 1850,
-            "title": "productos",
-            "img": "../img/productos/Y10.jpg"
+            "precio": 730,
+            "title": "Alga",
+            "img": "../img/productos/Y06.jpg"
         },
         {
             "id": 206,
             "tipo": "Algas",
-            "precio": 1890,
-            "title": "productos",
-            "img": "../img/productos/Z03.jpg"
+            "precio": 1850,
+            "title": "Algas",
+            "img": "../img/productos/Y07.jpg"
         },
         {
             "id": 207,
             "tipo": "Algas",
-            "precio": 490,
-            "title": "productos",
-            "img": "../img/productos/Z04.jpg"
+            "precio": 1890,
+            "title": "Algas",
+            "img": "../img/productos/Y08.jpg"
         },
         {
             "id": 208,
             "tipo": "Algas",
-            "precio": 730,
-            "title": "productos",
-            "img": "../img/productos/Y07.jpg"
+            "precio": 490,
+            "title": "Algas",
+            "img": "../img/productos/Y09.jpg"
         },
         {
             "id": 209,
             "tipo": "Algas",
+            "precio": 730,
+            "title": "Algas",
+            "img": "../img/productos/Y10.jpg"
+        },
+        {
+            "id": 210,
+            "tipo": "Algas",
             "precio": 780,
             "title": "Alga",
-            "img": "../img/productos/001.jpg"
+            "img": "../img/productos/Y11.jpg"
+        },
+        {
+            "id": 211,
+            "tipo": "Algas",
+            "precio": 780,
+            "title": "Alga",
+            "img": "../img/productos/Y12.jpg"
         },
         {
             "id": 301,
@@ -375,92 +375,163 @@
             "id": 302,
             "tipo": "Peceras",
             "precio": 2050,
-            "title": "90x85x120",
+            "title": "80x60x120",
             "img": "../img/productos/Z02.jpg"
         },
         {
             "id": 303,
             "tipo": "Peceras",
             "precio": 2650,
-            "title": "90x85x120",
-            "img": "../img/productos/Z05.jpg"
+            "title": "90x45x110",
+            "img": "../img/productos/Z03.jpg"
         },
         {
             "id": 304,
             "tipo": "Peceras",
             "precio": 2200,
-            "title": "90x85x120",
-            "img": "../img/productos/Z12.jpg"
+            "title": "40x40x60",
+            "img": "../img/productos/Z04.jpg"
         },
         {
             "id": 305,
             "tipo": "Peceras",
             "precio": 1900,
-            "title": "90x85x120",
-            "img": "../img/productos/Z07.jpg"
+            "title": "90x60x100",
+            "img": "../img/productos/Z05.jpg"
         },
         {
             "id": 306,
             "tipo": "Peceras",
             "precio": 2410,
-            "title": "90x85x120",
-            "img": "../img/productos/Z08.jpg"
+            "title": "85x50x125",
+            "img": "../img/productos/Z06.jpg"
         },
         {
             "id": 307,
             "tipo": "Peceras",
             "precio": 1850,
-            "title": "90x85x120",
-            "img": "../img/productos/Z09.jpg"
+            "title": "60x75x120",
+            "img": "../img/productos/Z07.jpg"
         },
         {
             "id": 308,
             "tipo": "Peceras",
             "precio": 1780,
-            "title": "90x85x120",
-            "img": "../img/productos/Z10.jpg"
+            "title": "100x95x120",
+            "img": "../img/productos/Z08.jpg"
         },
         {
             "id": 309,
             "tipo": "Peceras",
             "precio": 1550,
-            "title": "90x85x120",
-            "img": "../img/productos/Z11.jpg"
+            "title": "110x35x50",
+            "img": "../img/productos/Z09.jpg"
         },
         {
             "id": 310,
             "tipo": "Peceras",
             "precio": 2730,
-            "title": "90x85x120",
-            "img": "../img/productos/Z13.jpg"
+            "title": "80x80x115",
+            "img": "../img/productos/Z10.jpg"
         },
         {
             "id": 311,
             "tipo": "Peceras",
             "precio": 2350,
-            "title": "90x85x120",
-            "img": "../img/productos/Z14.jpg"
+            "title": "90x45x105",
+            "img": "../img/productos/Z11.jpg"
         },
         {
             "id": 312,
             "tipo": "Peceras",
             "precio": 2350,
-            "title": "90x85x120",
-            "img": "../img/productos/Z15.jpg"
+            "title": "120x55x90",
+            "img": "../img/productos/Z12.jpg"
         },
         {
-            "id": 313,
-            "tipo": "Peceras",
-            "precio": 2350,
-            "title": "90x85x120",
-            "img": "../img/productos/Z16.jpg"
+            "id": 351,
+            "tipo": "Artefactos",
+            "precio": 250,
+            "title": "Art. 01",
+            "img": "../img/productos/A01.jpg"
         },
         {
-            "id": 314,
-            "tipo": "Peceras",
-            "precio": 2350,
-            "title": "90x85x120",
-            "img": "../img/productos/Z17.jpg"
+            "id": 352,
+            "tipo": "Artefactos",
+            "precio": 280,
+            "title": "Art. 02",
+            "img": "../img/productos/A02.jpg"
+    
+        },
+        {
+            "id": 353,
+            "tipo": "Artefactos",
+            "precio": 300,
+            "title": "Art. 03",
+            "img": "../img/productos/A03.jpg"
+        },
+        {
+            "id": 354,
+            "tipo": "Artefactos",
+            "precio": 230,
+            "title": "Art. 04",
+            "img": "../img/productos/A04.jpg"
+        },
+        {
+            "id": 355,
+            "tipo": "Artefactos",
+            "precio": 300,
+            "title": "Art. 05",
+            "img": "../img/productos/A05.jpg"
+        },
+        {
+            "id": 356,
+            "tipo": "Artefactos",
+            "precio": 315,
+            "title": "Art. 06",
+            "img": "../img/productos/A06.jpg"
+        },
+        {
+            "id": 357,
+            "tipo": "Artefactos",
+            "precio": 260,
+            "title": "Art. 07",
+            "img": "../img/productos/A07.jpg"
+        },
+        {
+            "id": 358,
+            "tipo": "Artefactos",
+            "precio": 275,
+            "title": "Art. 08",
+            "img": "../img/productos/A08.jpg"
+        },
+        {
+            "id": 359,
+            "tipo": "Artefactos",
+            "precio": 265,
+            "title": "Art. 09",
+            "img": "../img/productos/A09.jpg"
+        },
+        {
+            "id": 360,
+            "tipo": "Artefactos",
+            "precio": 325,
+            "title": "Art. 10",
+            "img": "../img/productos/A10.jpg"
+        },
+        {
+            "id": 361,
+            "tipo": "Artefactos",
+            "precio": 375,
+            "title": "Art. 11",
+            "img": "../img/productos/A11.jpg"
+        },
+        {
+            "id": 362,
+            "tipo": "Artefactos",
+            "precio": 450,
+            "title": "Art. 12",
+            "img": "../img/productos/A12.jpg"
         }
     ]
 }

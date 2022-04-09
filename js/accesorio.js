@@ -7,6 +7,7 @@ const templateCardAccesorio = document.getElementById("template-card-accesorios"
 const templateProductoAccesorio = document.getElementById('template-accesorio').content;
 const templatePagoAccesorio = document.getElementById('template-pago').content;
 const alimentos = document.getElementById('Alimentos');
+const artefactos = document.getElementById('Artefactos');
 const ramas = document.getElementById('Ramas');
 const algas = document.getElementById('Algas');
 const peceras = document.getElementById('Peceras');
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', e => {
 const fetchData = async () => {
     const res = await fetch('../json/api.json');
     const data = await res.json();
+    filtrar(artefactos,data.productos);
     filtrar(alimentos,data.productos);
     filtrar(ramas,data.productos);
     filtrar(algas,data.productos);

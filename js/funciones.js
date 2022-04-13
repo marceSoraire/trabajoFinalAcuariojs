@@ -26,12 +26,22 @@ restarProducto = e => {
 }
 
 filtrar =(btn,data)=> {
-    btn.onclick = () => {
-        titleProducto.textContent = `${btn.id}`;
-        itemsAccesorios.innerHTML ='';
-        productoFiltrado = data.filter(data => { return data.tipo == btn.id})
-        mostrarCards(productoFiltrado)
-    }   
+    if (btn.id == 'Dulce' || btn.id == 'Salada') {
+        btn.onclick = () => {
+            items.innerHTML ='';
+            productoFiltrado = data.filter(data => { return data.tipo == btn.id})
+            mostrarCards(productoFiltrado)
+        } 
+    }
+    else {
+        btn.onclick = () => {
+            titleProducto.textContent = `${btn.id}`;
+            itemsAccesorios.innerHTML ='';
+            productoFiltrado = data.filter(data => { return data.tipo == btn.id})
+            mostrarCards(productoFiltrado)
+        } 
+    }
+      
 }
 
 opcionPago = (ticket,e) =>{

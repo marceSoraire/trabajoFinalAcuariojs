@@ -6,6 +6,9 @@ const end = document.getElementById('end');
 const templateCard = document.getElementById("template-card").content;
 const templateProducto = document.getElementById('template-productos').content;
 const templatePago = document.getElementById('template-pago').content;
+const dulce = document.getElementById('Dulce');
+const salada = document.getElementById('Salada');
+const titleProducto = document.querySelector('h1');
 const fragment = document.createDocumentFragment();
 let carrito = {};
 
@@ -25,6 +28,8 @@ document.addEventListener('DOMContentLoaded', e => {
 const fetchData = async () => {
     const res = await fetch('../json/api.json');
     const data = await res.json();
+    filtrar(dulce,data.peces);
+    filtrar(salada,data.peces);
     mostrarCards(data.peces);
     // console.log(data.alimentos);
 }
@@ -83,26 +88,34 @@ mostrarCompra =()=> {
 }
 
 compraConfirmada =()=> {
-
-    cerrado.innerHTML ='';
-    const ticket = Object.values(carrito).reduce((acc,{cantidad,precio})=> acc + cantidad*precio,0);
-    templatePago.querySelectorAll('button')[0].textContent = `1 Pago de $${ticket}`;
-    templatePago.querySelectorAll('button')[1].textContent = '3 cuotas 10% recargo';
-    templatePago.querySelectorAll('button')[2].textContent = '6 cuotas 15% recargo';
-    templatePago.querySelectorAll('button')[3].textContent = '12 cuotas 20% recargo';
-    const clone = templatePago.cloneNode(true);
-    fragment.appendChild(clone);
-    cerrado.appendChild(fragment);
-
-    const uno = document.getElementById('uno');
-    const dos = document.getElementById('dos');
-    const tres = document.getElementById('tres');
-    const cuatro = document.getElementById('cuatro');
-
-    uno.addEventListener('click', e => opcionPago(ticket,e));
-    dos.addEventListener('click', e => opcionPago(ticket,e));
-    tres.addEventListener('click', e => opcionPago(ticket,e));
-    cuatro.addEventListener('click', e => opcionPago(ticket,e));
+    if (Object.values(carrito) == 0) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Vacio',
+            text: 'Su carrito aun no contiene productos',
+        })
+    }
+    else {
+        cerrado.innerHTML ='';
+        const ticket = Object.values(carrito).reduce((acc,{cantidad,precio})=> acc + cantidad*precio,0);
+        templatePago.querySelectorAll('button')[0].textContent = `1 Pago de $${ticket}`;
+        templatePago.querySelectorAll('button')[1].textContent = '3 cuotas 10% recargo';
+        templatePago.querySelectorAll('button')[2].textContent = '6 cuotas 15% recargo';
+        templatePago.querySelectorAll('button')[3].textContent = '12 cuotas 20% recargo';
+        const clone = templatePago.cloneNode(true);
+        fragment.appendChild(clone);
+        cerrado.appendChild(fragment);
+    
+        const uno = document.getElementById('uno');
+        const dos = document.getElementById('dos');
+        const tres = document.getElementById('tres');
+        const cuatro = document.getElementById('cuatro');
+    
+        uno.addEventListener('click', e => opcionPago(ticket,e));
+        dos.addEventListener('click', e => opcionPago(ticket,e));
+        tres.addEventListener('click', e => opcionPago(ticket,e));
+        cuatro.addEventListener('click', e => opcionPago(ticket,e));
+    }
 }
 
 final.onclick = compraConfirmada;

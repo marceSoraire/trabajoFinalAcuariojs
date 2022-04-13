@@ -2,111 +2,242 @@
     "peces":[
         {
             "id": 1,
+            "tipo": "Salada",
             "precio": 700,
             "title": "Oxelote",
             "imgPez": "../img/peces/A01.jpg"
         },
         {
             "id": 2,
+            "tipo": "Dulce",
             "precio": 600,
             "title": "Goldenfish",
             "imgPez": "../img/peces/A99.jpg"
         },
         {
             "id": 3,
+            "tipo": "Dulce",
             "precio": 300,
             "title": "Tetra",
             "imgPez": "../img/peces/A20.jpg"
         },
         {
             "id": 4,
+            "tipo": "Salada",
             "precio": 500,
             "title": "Betagreey",
             "imgPez": "../img/peces/A17.jpg"
         },
         {
             "id": 5,
+            "tipo": "Dulce",
             "precio": 500,
-            "title": "BetOrange",
+            "title": "Bettamen",
             "imgPez": "../img/peces/A19.jpg"
         },
         {
             "id": 6,
+            "tipo": "Dulce",
             "precio": 650,
             "title": "Escalar",
             "imgPez": "../img/peces/A13.jpg"
         },
         {
             "id": 7,
+            "tipo": "Salada",
             "precio": 700,
             "title": "Payaso",
             "imgPez": "../img/peces/A21.jpg"
         },
         {
             "id": 8,
+            "tipo": "Salada",
             "precio": 800,
             "title": "Ancistrus",
             "imgPez": "../img/peces/A28.jpg"
         },
         {
             "id": 9,
+            "tipo": "Salada",
             "precio": 450,
             "title": "Caracol",
             "imgPez": "../img/peces/A08.jpg"
         },
         {
             "id": 10,
+            "tipo": "Dulce",
             "precio": 650,
-            "title": "EscalarY",
+            "title": "Angel",
             "imgPez": "../img/peces/A10.jpg"
         },
         {
             "id": 11,
+            "tipo": "Salada",
             "precio": 500,
             "title": "BetaRed",
             "imgPez": "../img/peces/007.jpg"
         },
         {
             "id": 12,
+            "tipo": "Salada",
             "precio": 750,
             "title": "BetaPink",
             "imgPez": "../img/peces/A15.jpg"
         },
         {
             "id": 13,
+            "tipo": "Salada",
             "precio": 820,
             "title": "Crab",
             "imgPez": "../img/peces/A26.jpg"
         },
         {
             "id": 14,
+            "tipo": "Salada",
             "precio": 750,
             "title": "BetaBlue",
             "imgPez": "../img/peces/A68.jpg"
         },
         {
             "id": 15,
+            "tipo": "Salada",
             "precio": 760,
             "title": "BetaBlack",
             "imgPez": "../img/peces/A66.jpg"
         },
         {
             "id": 16,
+            "tipo": "Salada",
             "precio": 780,
             "title": "BetaRed",
             "imgPez": "../img/peces/A70.jpg"
         },
         {
             "id": 17,
+            "tipo": "Salada",
             "precio": 790,
             "title": "BetaB",
             "imgPez": "../img/peces/A69.jpg"
         },
         {
             "id": 18,
+            "tipo": "Salada",
             "precio": 710,
             "title": "BetaClasic",
             "imgPez": "../img/peces/A14.jpg"
+        },
+
+        {
+            "id": 19,
+            "tipo": "Dulce",
+            "precio": 810,
+            "title": "TetraBlue",
+            "imgPez": "../img/peces/A30.jpg"
+        },
+        {
+            "id": 20,
+            "tipo": "Dulce",
+            "precio": 760,
+            "title": "Japones",
+            "imgPez": "../img/peces/A31.jpg"
+        },
+        {
+            "id": 21,
+            "tipo": "Dulce",
+            "precio": 780,
+            "title": "Bardo Rosado",
+            "imgPez": "../img/peces/A32.jpg"
+        },
+        {
+            "id": 22,
+            "tipo": "Dulce",
+            "precio": 510,
+            "title": "Arcoiris",
+            "imgPez": "../img/peces/A33.jpg"
+        },
+        {
+            "id": 23,
+            "tipo": "Dulce",
+            "precio": 660,
+            "title": "Cebra",
+            "imgPez": "../img/peces/A34.jpg"
+        },
+        {
+            "id": 24,
+            "tipo": "Dulce",
+            "precio": 690,
+            "title": "Espiga",
+            "imgPez": "../img/peces/A35.jpg"
+        },
+        {
+            "id": 25,
+            "tipo": "Dulce",
+            "precio": 580,
+            "title": "Killis",
+            "imgPez": "../img/peces/A36.jpg"
+        },
+        {
+            "id": 26,
+            "tipo": "Dulce",
+            "precio": 845,
+            "title": "Gato",
+            "imgPez": "../img/peces/A37.jpg"
+        },
+        {
+            "id": 27,
+            "tipo": "Dulce",
+            "precio": 770,
+            "title": "Globo",
+            "imgPez": "../img/peces/A38.jpg"
+        },
+        {
+            "id": 28,
+            "tipo": "Dulce",
+            "precio": 820,
+            "title": "Neon",
+            "imgPez": "../img/peces/A39.jpg"
+        },
+        {
+            "id": 29,
+            "tipo": "Dulce",
+            "precio": 630,
+            "title": "Colisa",
+            "imgPez": "../img/peces/A40.jpg"
+        },
+        {
+            "id": 30,
+            "tipo": "Salada",
+            "precio": 590,
+            "title": "Damisela",
+            "imgPez": "../img/peces/A41.jpg"
+        },
+        {
+            "id": 31,
+            "tipo": "Salada",
+            "precio": 890,
+            "title": "Cirujano",
+            "imgPez": "../img/peces/A42.jpg"
+        },
+        {
+            "id": 32,
+            "tipo": "Salada",
+            "precio": 900,
+            "title": "Emperado",
+            "imgPez": "../img/peces/A43.jpg"
+        },
+        {
+            "id": 33,
+            "tipo": "Salada",
+            "precio": 525,
+            "title": "Gobios",
+            "imgPez": "../img/peces/A44.jpg"
+        },
+        {
+            "id": 34,
+            "tipo": "Salada",
+            "precio": 670,
+            "title": "Enana Magenta",
+            "imgPez": "../img/peces/A45.jpg"
         }
     ],
     "productos":[

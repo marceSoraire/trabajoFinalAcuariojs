@@ -88,26 +88,35 @@ mostrarCompra =()=> {
 }
 
 compraConfirmada =()=> {
-
-    cerrado.innerHTML ='';
-    const ticket = Object.values(carrito).reduce((acc,{cantidad,precio})=> acc + cantidad*precio,0);
-    templatePagoAccesorio.querySelectorAll('button')[0].textContent = `1 Pago de $${ticket}`;
-    templatePagoAccesorio.querySelectorAll('button')[1].textContent = '3 cuotas 10% recargo';
-    templatePagoAccesorio.querySelectorAll('button')[2].textContent = '6 cuotas 15% recargo';
-    templatePagoAccesorio.querySelectorAll('button')[3].textContent = '12 cuotas 20% recargo';
-    const clone = templatePagoAccesorio.cloneNode(true);
-    fragment.appendChild(clone);
-    cerrado.appendChild(fragment);
-
-    const uno = document.getElementById('uno');
-    const dos = document.getElementById('dos');
-    const tres = document.getElementById('tres');
-    const cuatro = document.getElementById('cuatro');
-
-    uno.addEventListener('click', e => opcionPago(ticket,e));
-    dos.addEventListener('click', e => opcionPago(ticket,e));
-    tres.addEventListener('click', e => opcionPago(ticket,e));
-    cuatro.addEventListener('click', e => opcionPago(ticket,e));
+    if (Object.values(carrito) == 0) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Vacio',
+            text: 'Su carrito aun no contiene productos',
+        })
+    }
+    else {
+        cerrado.innerHTML ='';
+        const ticket = Object.values(carrito).reduce((acc,{cantidad,precio})=> acc + cantidad*precio,0);
+        templatePagoAccesorio.querySelectorAll('button')[0].textContent = `1 Pago de $${ticket}`;
+        templatePagoAccesorio.querySelectorAll('button')[1].textContent = '3 cuotas 10% recargo';
+        templatePagoAccesorio.querySelectorAll('button')[2].textContent = '6 cuotas 15% recargo';
+        templatePagoAccesorio.querySelectorAll('button')[3].textContent = '12 cuotas 20% recargo';
+        const clone = templatePagoAccesorio.cloneNode(true);
+        fragment.appendChild(clone);
+        cerrado.appendChild(fragment);
+    
+        const uno = document.getElementById('uno');
+        const dos = document.getElementById('dos');
+        const tres = document.getElementById('tres');
+        const cuatro = document.getElementById('cuatro');
+    
+        uno.addEventListener('click', e => opcionPago(ticket,e));
+        dos.addEventListener('click', e => opcionPago(ticket,e));
+        tres.addEventListener('click', e => opcionPago(ticket,e));
+        cuatro.addEventListener('click', e => opcionPago(ticket,e));
+    }
+    
 }
 
 final.onclick = compraConfirmada;
